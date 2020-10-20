@@ -14,6 +14,9 @@
 		56CF509E253F11C9002B64F9 /* InputDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56CF509C253F11C9002B64F9 /* InputDataTableViewCell.xib */; };
 		56CF50A9253F18FD002B64F9 /* InputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF50A8253F18FD002B64F9 /* InputModel.swift */; };
 		56CF50B7253F3301002B64F9 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF50B6253F3301002B64F9 /* String+Extension.swift */; };
+		56CF512A253F8A43002B64F9 /* OneButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF5128253F8A43002B64F9 /* OneButtonTableViewCell.swift */; };
+		56CF512B253F8A43002B64F9 /* OneButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56CF5129253F8A43002B64F9 /* OneButtonTableViewCell.xib */; };
+		56CF5133253F91E9002B64F9 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF5132253F91E9002B64F9 /* LoginModel.swift */; };
 		56EF40CE253E2FFD00D2DFF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF40CD253E2FFD00D2DFF2 /* AppDelegate.swift */; };
 		56EF40D0253E2FFD00D2DFF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF40CF253E2FFD00D2DFF2 /* SceneDelegate.swift */; };
 		56EF40D7253E300000D2DFF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56EF40D6253E300000D2DFF2 /* Assets.xcassets */; };
@@ -49,6 +52,9 @@
 		56CF509C253F11C9002B64F9 /* InputDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputDataTableViewCell.xib; sourceTree = "<group>"; };
 		56CF50A8253F18FD002B64F9 /* InputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputModel.swift; sourceTree = "<group>"; };
 		56CF50B6253F3301002B64F9 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		56CF5128253F8A43002B64F9 /* OneButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonTableViewCell.swift; sourceTree = "<group>"; };
+		56CF5129253F8A43002B64F9 /* OneButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneButtonTableViewCell.xib; sourceTree = "<group>"; };
+		56CF5132253F91E9002B64F9 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		56EF40CA253E2FFD00D2DFF2 /* IOSSysChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSSysChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EF40CD253E2FFD00D2DFF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56EF40CF253E2FFD00D2DFF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +101,7 @@
 			children = (
 				56CF5087253E65CE002B64F9 /* HeaderViewCell.xib */,
 				56CF509C253F11C9002B64F9 /* InputDataTableViewCell.xib */,
+				56CF5129253F8A43002B64F9 /* OneButtonTableViewCell.xib */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 		56CF507E253E657F002B64F9 /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				56CF5128253F8A43002B64F9 /* OneButtonTableViewCell.swift */,
 				56CF509B253F11C9002B64F9 /* InputDataTableViewCell.swift */,
 				56CF507F253E65B9002B64F9 /* HeaderCell.swift */,
 			);
@@ -198,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				56CF50A8253F18FD002B64F9 /* InputModel.swift */,
+				56CF5132253F91E9002B64F9 /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,6 +351,7 @@
 			files = (
 				56EF40DA253E300000D2DFF2 /* LaunchScreen.storyboard in Resources */,
 				56EF40D7253E300000D2DFF2 /* Assets.xcassets in Resources */,
+				56CF512B253F8A43002B64F9 /* OneButtonTableViewCell.xib in Resources */,
 				56CF5078253E60D6002B64F9 /* LoginView.xib in Resources */,
 				56CF5088253E65CE002B64F9 /* HeaderViewCell.xib in Resources */,
 				56CF509E253F11C9002B64F9 /* InputDataTableViewCell.xib in Resources */,
@@ -374,9 +384,11 @@
 				56CF5080253E65B9002B64F9 /* HeaderCell.swift in Sources */,
 				56EF410F253E314200D2DFF2 /* LoginViewController.swift in Sources */,
 				56CF50A9253F18FD002B64F9 /* InputModel.swift in Sources */,
+				56CF5133253F91E9002B64F9 /* LoginModel.swift in Sources */,
 				56EF40CE253E2FFD00D2DFF2 /* AppDelegate.swift in Sources */,
 				56CF509D253F11C9002B64F9 /* InputDataTableViewCell.swift in Sources */,
 				56EF40D0253E2FFD00D2DFF2 /* SceneDelegate.swift in Sources */,
+				56CF512A253F8A43002B64F9 /* OneButtonTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

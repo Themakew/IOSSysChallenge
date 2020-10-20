@@ -22,6 +22,7 @@ class InputDataTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var textFieldIcon: UIImageView!
+    @IBOutlet weak var errorLabel: UILabel!
     
     private var isPasswordHidden: Bool = false
     private var cellType: InputCellType?
@@ -51,11 +52,13 @@ class InputDataTableViewCell: UITableViewCell {
         setInputType(type: object.cellType)
     }
     
-    func setErrorState() {
+    func setErrorState(errorMessage: String) {
         textFieldIcon.image = UIImage(named: "password_error")
         
         inputTextField.layer.borderWidth = 1
-        inputTextField.layer.borderColor = UIColor(red: 0.92, green: 0.34, blue: 0.34, alpha: 1.00).cgColor
+        inputTextField.layer.borderColor = UIColor(red: 0.88, green: 0.00, blue: 0.00, alpha: 1.00).cgColor
+        
+        errorLabel.text = errorMessage
     }
     
     func setNormalState() {
@@ -63,6 +66,8 @@ class InputDataTableViewCell: UITableViewCell {
         
         inputTextField.layer.borderWidth = 0
         inputTextField.layer.borderColor = .none
+        
+        errorLabel.text = ""
     }
     
     // MARK: - Private Methods -
