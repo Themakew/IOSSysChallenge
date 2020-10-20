@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56CF5078253E60D6002B64F9 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56CF5077253E60D6002B64F9 /* LoginView.xib */; };
+		56CF5080253E65B9002B64F9 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF507F253E65B9002B64F9 /* HeaderCell.swift */; };
+		56CF5088253E65CE002B64F9 /* HeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56CF5087253E65CE002B64F9 /* HeaderViewCell.xib */; };
 		56EF40CE253E2FFD00D2DFF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF40CD253E2FFD00D2DFF2 /* AppDelegate.swift */; };
 		56EF40D0253E2FFD00D2DFF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF40CF253E2FFD00D2DFF2 /* SceneDelegate.swift */; };
 		56EF40D7253E300000D2DFF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56EF40D6253E300000D2DFF2 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56CF5077253E60D6002B64F9 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		56CF507F253E65B9002B64F9 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		56CF5087253E65CE002B64F9 /* HeaderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderViewCell.xib; sourceTree = "<group>"; };
 		56EF40CA253E2FFD00D2DFF2 /* IOSSysChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSSysChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EF40CD253E2FFD00D2DFF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56EF40CF253E2FFD00D2DFF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56CF507D253E6570002B64F9 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				56CF5087253E65CE002B64F9 /* HeaderViewCell.xib */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		56CF507E253E657F002B64F9 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				56CF507F253E65B9002B64F9 /* HeaderCell.swift */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
 		56EF40C1253E2FFD00D2DFF2 = {
 			isa = PBXGroup;
 			children = (
@@ -179,8 +201,9 @@
 		56EF410C253E30EF00D2DFF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				56EF4116253E314900D2DFF2 /* Layout */,
 				56EF410E253E314200D2DFF2 /* LoginViewController.swift */,
+				56EF4116253E314900D2DFF2 /* Layout */,
+				56CF507E253E657F002B64F9 /* Custom Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,7 +218,9 @@
 		56EF4116253E314900D2DFF2 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				56CF507D253E6570002B64F9 /* Custom Cells */,
 				56EF40D8253E300000D2DFF2 /* LaunchScreen.storyboard */,
+				56CF5077253E60D6002B64F9 /* LoginView.xib */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -305,6 +330,8 @@
 			files = (
 				56EF40DA253E300000D2DFF2 /* LaunchScreen.storyboard in Resources */,
 				56EF40D7253E300000D2DFF2 /* Assets.xcassets in Resources */,
+				56CF5078253E60D6002B64F9 /* LoginView.xib in Resources */,
+				56CF5088253E65CE002B64F9 /* HeaderViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56EF4118253E315D00D2DFF2 /* LoginViewModel.swift in Sources */,
+				56CF5080253E65B9002B64F9 /* HeaderCell.swift in Sources */,
 				56EF410F253E314200D2DFF2 /* LoginViewController.swift in Sources */,
 				56EF40CE253E2FFD00D2DFF2 /* AppDelegate.swift in Sources */,
 				56EF40D0253E2FFD00D2DFF2 /* SceneDelegate.swift in Sources */,
