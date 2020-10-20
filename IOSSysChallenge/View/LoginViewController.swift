@@ -76,6 +76,6 @@ extension LoginViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 2 {
             return 112.0
         }
-        return 84.0
+        return 86.0
     }
 }
