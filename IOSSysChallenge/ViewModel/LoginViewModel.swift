@@ -52,9 +52,9 @@ class LoginViewModel {
     func buildLoginList() -> [LoginBaseProtocol] {
         var list = [LoginBaseProtocol]()
         
-        list.append(InputTextField(id: 1, title: "Email", textFieldType: .email))
-        list.append(InputTextField(id: 2, title: "Senha", textFieldType: .password))
-        list.append(OneButton(title: "ENTRAR"))
+        list.append(InputTextField(id: 1, title: "email".text(), textFieldType: .email))
+        list.append(InputTextField(id: 2, title: "password".text(), textFieldType: .password))
+        list.append(OneButton(title: "enter".text()))
         
         return list
     }

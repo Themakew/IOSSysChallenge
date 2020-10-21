@@ -20,6 +20,10 @@ final class SearchCompaniesViewController: UIViewController {
     private var searchCompaniesViewModel = SearchCompaniesViewModel(httpManager: HTTPManager(session: URLSession.shared))
     private var tableViewList: [CompanyModel] = []
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - View Lifecycle -
     
     override func viewDidLoad() {
@@ -32,8 +36,11 @@ final class SearchCompaniesViewController: UIViewController {
         tableView.register(CompanyTableViewCell.fromNib, forCellReuseIdentifier: CompanyTableViewCell.identifier)
         
         searchBar.delegate = self
+        
         infoLabel.text = ""
         navigationController?.isNavigationBarHidden = true
+        
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     override func viewWillAppear(_ animated: Bool) {

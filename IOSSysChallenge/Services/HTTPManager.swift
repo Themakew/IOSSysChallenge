@@ -32,9 +32,7 @@ extension HTTPError: LocalizedError {
         switch self {
         case .invalidURL:
             return "service_url_error".text()
-        case .invalidResponse:
-            return "service_error".text()
-        case .unknown:
+        case .invalidResponse, .unknown:
             return "unknown_error".text()
         }
     }

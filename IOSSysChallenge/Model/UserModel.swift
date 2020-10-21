@@ -20,9 +20,9 @@ struct UserModel: Codable {
     
     static func validate(email: String) -> (result: Bool, error: String) {
         if email.isEmpty {
-            return (false, "Inform your email")
+            return (false, "inform_your_email".text())
         } else if !email.isValidEmail() {
-            return (false, "Inform a valid email")
+            return (false, "inform_a_valid_email".text())
         } else {
             return (true, "")
         }
@@ -30,9 +30,9 @@ struct UserModel: Codable {
     
     static func validate(password: String) -> (result: Bool, error: String) {
         if password.isEmpty {
-            return (false, "Informe your password")
+            return (false, "inform_your_password".text())
         } else if password.count < 4 {
-            return (false, "Inform a valid password")
+            return (false, "inform_a_valid_password".text())
         } else {
             return (true, "")
         }

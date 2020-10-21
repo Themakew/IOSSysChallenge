@@ -24,6 +24,10 @@ final class LoginViewController: UIViewController {
     private var inputPassword: String = ""
     private var currentTextField: UITextField?
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - View Lifecycle -
     
     override func viewDidLoad() {
@@ -46,6 +50,7 @@ final class LoginViewController: UIViewController {
         self.view.addGestureRecognizer(tapGesture)
         
         getTableViewList()
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     // MARK: - Private Methods -
@@ -80,10 +85,12 @@ extension LoginViewController {
     func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         currentTextField?.resignFirstResponder()
         
-        let indexPath = IndexPath(row: 2, section: 0)
-        let cell = tableView.cellForRow(at: indexPath) as! OneButtonTableViewCell
-        cell.buttonOne.isEnabled = !inputEmailHasError && !inputPasswordHasError
-        cell.reloadInputViews()
+        if !inputEmail.isEmpty && !inputPassword.isEmpty {
+            let indexPath = IndexPath(row: 2, section: 0)
+            let cell = tableView.cellForRow(at: indexPath) as! OneButtonTableViewCell
+            cell.buttonOne.isEnabled = !inputEmailHasError && !inputPasswordHasError
+            cell.reloadInputViews()
+        }
     }
 }
 
@@ -92,6 +99,11 @@ extension LoginViewController {
 extension LoginViewController: InputDataTableViewCellDelegate {
     func didBeginEditing(textField: UITextField) {
         currentTextField = textField
+        
+        let indexPath = IndexPath(row: 2, section: 0)
+        let cell = tableView.cellForRow(at: indexPath) as! OneButtonTableViewCell
+        cell.buttonOne.isEnabled = false
+        cell.reloadInputViews()
     }
     
     func didEnteredData(textField: UITextField, isHasError: Bool) {
@@ -109,6 +121,7 @@ extension LoginViewController: InputDataTableViewCellDelegate {
 
 extension LoginViewController: OneButtonTableViewCellDelegate {
     func didClickButton() {
+        Utils.showLoading(self)
         loginViewModel.makeLogin(request: loginViewModel.getLoginModelObject(email: inputEmail, password: inputPassword)) { response in
             switch response {
             case .failure(let error):
@@ -120,6 +133,7 @@ extension LoginViewController: OneButtonTableViewCellDelegate {
                 }
             }
         }
+        Utils.hideLoading(self)
     }
 }
 

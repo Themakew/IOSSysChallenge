@@ -25,4 +25,20 @@ class Utils {
             viewController.present(alert, animated: true, completion: completion)
         }
     }
+    
+    static func showLoading(_ viewController: UIViewController) {
+        let alert = UIAlertController(title: nil, message: "Carregando...", preferredStyle: .alert)
+
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = .medium
+        loadingIndicator.startAnimating();
+
+        alert.view.addSubview(loadingIndicator)
+        viewController.present(alert, animated: true, completion: nil)
+    }
+    
+    static func hideLoading(_ viewController: UIViewController) {
+        viewController.dismiss(animated: false, completion: nil)
+    }
 }
