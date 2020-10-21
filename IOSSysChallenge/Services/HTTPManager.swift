@@ -125,6 +125,10 @@ class HTTPManager {
         urlRequest.httpMethod = type.rawValue
         
         guard type == .POST, let httpBody = try? JSONSerialization.data(withJSONObject: request, options: []) else {
+            urlRequest.setValue("Application/json", forHTTPHeaderField: "Content-Type")
+            urlRequest.setValue(AppAuth.shared.auth?.token ?? "", forHTTPHeaderField: "access-token")
+            urlRequest.setValue(AppAuth.shared.auth?.client ?? "", forHTTPHeaderField: "client")
+            urlRequest.setValue(AppAuth.shared.auth?.uid ?? "", forHTTPHeaderField: "uid")
             return urlRequest
         }
         

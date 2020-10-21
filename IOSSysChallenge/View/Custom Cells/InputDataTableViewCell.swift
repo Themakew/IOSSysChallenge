@@ -16,7 +16,8 @@ enum InputCellType {
 // MARK: - Protocol -
 
 protocol InputDataTableViewCellDelegate {
-    func didEnteredData(text: String, textFieldTag: Int, isHasError: Bool)
+    func didEnteredData(textField: UITextField, isHasError: Bool)
+    func didBeginEditing(textField: UITextField)
 }
 
 // MARK: -
@@ -147,22 +148,26 @@ extension InputDataTableViewCell: UITextFieldDelegate {
             if let inputText = textField.text {
                 if InputModel.validate(email: inputText).result {
                     setNormalState()
-                    delegate?.didEnteredData(text: inputText, textFieldTag: 1, isHasError: false)
+                    delegate?.didEnteredData(textField: textField, isHasError: false)
                 } else {
                     setErrorState(errorMessage: InputModel.validate(email: inputText).error)
-                    delegate?.didEnteredData(text: inputText, textFieldTag: 1, isHasError: true)
+                    delegate?.didEnteredData(textField: textField, isHasError: true)
                 }
             }
         } else {
             if let inputText = textField.text {
                 if InputModel.validate(password: inputText).result {
                     setNormalState()
-                    delegate?.didEnteredData(text: inputText, textFieldTag: 2, isHasError: false)
+                    delegate?.didEnteredData(textField: textField, isHasError: false)
                 } else {
                     setErrorState(errorMessage: InputModel.validate(password: inputText).error)
-                    delegate?.didEnteredData(text: inputText, textFieldTag: 2, isHasError: true)
+                    delegate?.didEnteredData(textField: textField, isHasError: true)
                 }
             }
         }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        delegate?.didBeginEditing(textField: textField)
     }
 }

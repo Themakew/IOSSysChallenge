@@ -34,6 +34,14 @@
 		56FFD4B925407B85008E2CB8 /* AppAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD4B825407B85008E2CB8 /* AppAuth.swift */; };
 		56FFD4BE25407EDB008E2CB8 /* SearchCompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD4BD25407EDB008E2CB8 /* SearchCompaniesViewController.swift */; };
 		56FFD4C625408260008E2CB8 /* SearchCompaniesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56FFD4C525408260008E2CB8 /* SearchCompaniesView.xib */; };
+		56FFD4CB25408D9F008E2CB8 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD4CA25408D9F008E2CB8 /* UIScreen+Extension.swift */; };
+		56FFD4D02540A024008E2CB8 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD4CF2540A024008E2CB8 /* CompanyDetailViewController.swift */; };
+		56FFD4DB2540A089008E2CB8 /* CompanyDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56FFD4DA2540A089008E2CB8 /* CompanyDetailView.xib */; };
+		56FFD4E12540A2D5008E2CB8 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD4DF2540A2D5008E2CB8 /* CompanyTableViewCell.swift */; };
+		56FFD4E22540A2D5008E2CB8 /* CompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56FFD4E02540A2D5008E2CB8 /* CompanyTableViewCell.xib */; };
+		56FFD4EA2540A4A8008E2CB8 /* SearchCompaniesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD4E92540A4A8008E2CB8 /* SearchCompaniesViewModel.swift */; };
+		56FFD4EF2540A502008E2CB8 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD4EE2540A502008E2CB8 /* CompanyModel.swift */; };
+		56FFD5002540B940008E2CB8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD4FF2540B940008E2CB8 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +95,14 @@
 		56FFD4B825407B85008E2CB8 /* AppAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAuth.swift; sourceTree = "<group>"; };
 		56FFD4BD25407EDB008E2CB8 /* SearchCompaniesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompaniesViewController.swift; sourceTree = "<group>"; };
 		56FFD4C525408260008E2CB8 /* SearchCompaniesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCompaniesView.xib; sourceTree = "<group>"; };
+		56FFD4CA25408D9F008E2CB8 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
+		56FFD4CF2540A024008E2CB8 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
+		56FFD4DA2540A089008E2CB8 /* CompanyDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyDetailView.xib; sourceTree = "<group>"; };
+		56FFD4DF2540A2D5008E2CB8 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
+		56FFD4E02540A2D5008E2CB8 /* CompanyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyTableViewCell.xib; sourceTree = "<group>"; };
+		56FFD4E92540A4A8008E2CB8 /* SearchCompaniesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompaniesViewModel.swift; sourceTree = "<group>"; };
+		56FFD4EE2540A502008E2CB8 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
+		56FFD4FF2540B940008E2CB8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +136,7 @@
 				56CF5087253E65CE002B64F9 /* HeaderViewCell.xib */,
 				56CF509C253F11C9002B64F9 /* InputDataTableViewCell.xib */,
 				56CF5129253F8A43002B64F9 /* OneButtonTableViewCell.xib */,
+				56FFD4E02540A2D5008E2CB8 /* CompanyTableViewCell.xib */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -127,6 +144,7 @@
 		56CF507E253E657F002B64F9 /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				56FFD4DF2540A2D5008E2CB8 /* CompanyTableViewCell.swift */,
 				56CF5128253F8A43002B64F9 /* OneButtonTableViewCell.swift */,
 				56CF509B253F11C9002B64F9 /* InputDataTableViewCell.swift */,
 				56CF507F253E65B9002B64F9 /* HeaderCell.swift */,
@@ -157,6 +175,7 @@
 		56EF40CC253E2FFD00D2DFF2 /* IOSSysChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				56FFD4FE2540B935008E2CB8 /* Utils */,
 				56EF4103253E30B600D2DFF2 /* AppDelegate */,
 				56EF4104253E30C100D2DFF2 /* Services */,
 				56EF410C253E30EF00D2DFF2 /* View */,
@@ -220,6 +239,7 @@
 			children = (
 				56CF50B6253F3301002B64F9 /* String+Extension.swift */,
 				56FFD4AE254051D5008E2CB8 /* URLSession+Extension.swift */,
+				56FFD4CA25408D9F008E2CB8 /* UIScreen+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -231,6 +251,7 @@
 				56CF5132253F91E9002B64F9 /* LoginModel.swift */,
 				565CDBEE253FB8DE004A91EE /* UserModel.swift */,
 				56FFD4B325407B49008E2CB8 /* AuthModel.swift */,
+				56FFD4EE2540A502008E2CB8 /* CompanyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				56EF4117253E315D00D2DFF2 /* LoginViewModel.swift */,
+				56FFD4E92540A4A8008E2CB8 /* SearchCompaniesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -248,6 +270,7 @@
 			children = (
 				56EF410E253E314200D2DFF2 /* LoginViewController.swift */,
 				56FFD4BD25407EDB008E2CB8 /* SearchCompaniesViewController.swift */,
+				56FFD4CF2540A024008E2CB8 /* CompanyDetailViewController.swift */,
 				56EF4116253E314900D2DFF2 /* Layout */,
 				56CF507E253E657F002B64F9 /* Custom Cells */,
 			);
@@ -269,8 +292,17 @@
 				56EF40D8253E300000D2DFF2 /* LaunchScreen.storyboard */,
 				56CF5077253E60D6002B64F9 /* LoginView.xib */,
 				56FFD4C525408260008E2CB8 /* SearchCompaniesView.xib */,
+				56FFD4DA2540A089008E2CB8 /* CompanyDetailView.xib */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		56FFD4FE2540B935008E2CB8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				56FFD4FF2540B940008E2CB8 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,7 +413,9 @@
 				56EF40D7253E300000D2DFF2 /* Assets.xcassets in Resources */,
 				56CF512B253F8A43002B64F9 /* OneButtonTableViewCell.xib in Resources */,
 				56CF5142253FA9A6002B64F9 /* IOSSysChallenge.strings in Resources */,
+				56FFD4DB2540A089008E2CB8 /* CompanyDetailView.xib in Resources */,
 				56CF5078253E60D6002B64F9 /* LoginView.xib in Resources */,
+				56FFD4E22540A2D5008E2CB8 /* CompanyTableViewCell.xib in Resources */,
 				56CF5088253E65CE002B64F9 /* HeaderViewCell.xib in Resources */,
 				56CF509E253F11C9002B64F9 /* InputDataTableViewCell.xib in Resources */,
 			);
@@ -409,15 +443,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				56CF50B7253F3301002B64F9 /* String+Extension.swift in Sources */,
+				56FFD4EF2540A502008E2CB8 /* CompanyModel.swift in Sources */,
+				56FFD4D02540A024008E2CB8 /* CompanyDetailViewController.swift in Sources */,
 				56FFD4BE25407EDB008E2CB8 /* SearchCompaniesViewController.swift in Sources */,
+				56FFD4E12540A2D5008E2CB8 /* CompanyTableViewCell.swift in Sources */,
 				56EF4118253E315D00D2DFF2 /* LoginViewModel.swift in Sources */,
 				56FFD4AF254051D5008E2CB8 /* URLSession+Extension.swift in Sources */,
 				56CF5080253E65B9002B64F9 /* HeaderCell.swift in Sources */,
+				56FFD4CB25408D9F008E2CB8 /* UIScreen+Extension.swift in Sources */,
 				56EF410F253E314200D2DFF2 /* LoginViewController.swift in Sources */,
+				56FFD4EA2540A4A8008E2CB8 /* SearchCompaniesViewModel.swift in Sources */,
 				56CF50A9253F18FD002B64F9 /* InputModel.swift in Sources */,
 				565CDBEF253FB8DE004A91EE /* UserModel.swift in Sources */,
 				56CF5133253F91E9002B64F9 /* LoginModel.swift in Sources */,
 				56EF40CE253E2FFD00D2DFF2 /* AppDelegate.swift in Sources */,
+				56FFD5002540B940008E2CB8 /* Utils.swift in Sources */,
 				56CF513D253FA924002B64F9 /* HTTPManager.swift in Sources */,
 				56CF509D253F11C9002B64F9 /* InputDataTableViewCell.swift in Sources */,
 				56FFD4B925407B85008E2CB8 /* AppAuth.swift in Sources */,

@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: -
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     // MARK: - Properties -
     
@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
     private var inputPasswordHasError: Bool = false
     private var inputEmail: String = ""
     private var inputPassword: String = ""
+    private var currentTextField: UITextField?
     
     // MARK: - View Lifecycle -
     
@@ -41,8 +42,8 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
         
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
-//        self.view.addGestureRecognizer(tapGesture)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
+        self.view.addGestureRecognizer(tapGesture)
         
         getTableViewList()
     }
@@ -63,31 +64,21 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     @objc
     func keyboardWillShow(sender: NSNotification) {
-        self.view.frame.origin.y = -50
+        if UIScreen.main.sizeType == .iPhone6 {
+            self.view.frame.origin.y = -60
+        }
     }
 
     @objc
     func keyboardWillHide(sender: NSNotification) {
-        self.view.frame.origin.y = 0
+        if UIScreen.main.sizeType == .iPhone6 {
+            self.view.frame.origin.y = 0
+        }
     }
     
-//    @objc
-//    func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-//        aTextField.resignFirstResponder()
-//    }
-}
-
-// MARK: - InputDataTableViewCellDelegate -
-
-extension LoginViewController: InputDataTableViewCellDelegate {
-    func didEnteredData(text: String, textFieldTag: Int, isHasError: Bool) {
-        if textFieldTag == 1 {
-            inputEmail = text
-            inputEmailHasError = isHasError
-        } else {
-            inputPassword = text
-            inputPasswordHasError = isHasError
-        }
+    @objc
+    func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        currentTextField?.resignFirstResponder()
         
         let indexPath = IndexPath(row: 2, section: 0)
         let cell = tableView.cellForRow(at: indexPath) as! OneButtonTableViewCell
@@ -96,14 +87,37 @@ extension LoginViewController: InputDataTableViewCellDelegate {
     }
 }
 
+// MARK: - InputDataTableViewCellDelegate -
+
+extension LoginViewController: InputDataTableViewCellDelegate {
+    func didBeginEditing(textField: UITextField) {
+        currentTextField = textField
+    }
+    
+    func didEnteredData(textField: UITextField, isHasError: Bool) {
+        if textField.tag == 1 {
+            inputEmail = textField.text ?? ""
+            inputEmailHasError = isHasError
+        } else {
+            inputPassword = textField.text ?? ""
+            inputPasswordHasError = isHasError
+        }
+    }
+}
+
 // MARK: - OneButtonTableViewCellDelegate -
 
 extension LoginViewController: OneButtonTableViewCellDelegate {
     func didClickButton() {
         loginViewModel.makeLogin(request: loginViewModel.getLoginModelObject(email: inputEmail, password: inputPassword)) { response in
-            DispatchQueue.main.async {
-                let viewController = SearchCompaniesViewController()
-                self.navigationController?.pushViewController(viewController, animated: false)
+            switch response {
+            case .failure(let error):
+                Utils.alert(self, error.localizedDescription)
+            case .success(_, _, _):
+                DispatchQueue.main.async {
+                    let viewController = SearchCompaniesViewController()
+                    self.navigationController?.pushViewController(viewController, animated: false)
+                }
             }
         }
     }

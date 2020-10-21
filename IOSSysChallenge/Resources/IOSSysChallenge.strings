@@ -6,6 +6,7 @@
   
 */
 
+"service_error" = "Sistema indisponível, tente novamente.";
 "service_url_error" = "Url inválida, tente novamente.";
 "service_success" = "Check-in realizado com sucesso!";
 "unknown_error" = "Sistema indisponível, por favor tente novamente";

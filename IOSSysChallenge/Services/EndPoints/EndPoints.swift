@@ -10,15 +10,15 @@ import Foundation
 enum EndPoints {
     case login, research
     
-    static var domain = "https://empresas.ioasys.com.br/api"
-    static var apiVersion = "/v1"
+    private static var domain = "https://empresas.ioasys.com.br/api"
+    private static var apiVersion = "/v1"
     
     var path: String {
         switch self {
         case .login:
             return "\(EndPoints.domain)\(EndPoints.apiVersion)/users/auth/sign_in"
         case .research:
-            return ""
+            return "\(EndPoints.domain)\(EndPoints.apiVersion)/enterprises/1"
         }
     }
 }
