@@ -7,11 +7,15 @@
 
 import UIKit
 
+// MARK: -
+
 class Utils {
+    
+    // MARK: - Static Methods -
     
     static func alert(_ viewController: UIViewController, title: String? = nil, _ message: String, btnLabel: String? = nil, completion: (() -> ())? = nil, onOK: (() -> ())? = nil) {
         DispatchQueue.main.async {
-            let cancelButton = UIAlertAction(title: btnLabel ?? "ok".text(), style: .default, handler: { action in
+            let cancelButton = UIAlertAction(title: btnLabel ?? "Ok".text(), style: .default, handler: { action in
                 onOK?()
             })
             

@@ -7,10 +7,19 @@
 
 import UIKit
 
-class CompanyTableViewCell: UITableViewCell {
+// MARK: -
 
+final class CompanyTableViewCell: UITableViewCell {
+
+    // MARK: - Properties -
+    
     @IBOutlet weak var backgroundCell: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    
+    static let identifier = "CompanyTableViewCell"
+    static let fromNib = UINib(nibName: identifier, bundle: .main)
+    
+    // MARK: - View Lifecycle -
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +30,8 @@ class CompanyTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    // MARK: - Public Methods -
     
     func bind(object: String) {
         titleLabel.text = object

@@ -10,9 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CompanyDetailViewController" customModule="IOSSysChallenge" customModuleProvider="target">
             <connections>
-                <outlet property="backButtonBar" destination="nhq-ej-wIj" id="qFT-pZ-pUW"/>
                 <outlet property="companyDescriptionLbl" destination="Ct4-ep-xOg" id="5Pa-eo-3mk"/>
                 <outlet property="companyNameLbl" destination="KgD-5B-udb" id="qNy-tO-tMZ"/>
+                <outlet property="navigationBar" destination="Knt-o6-St6" id="66z-BZ-Wpw"/>
                 <outlet property="view" destination="iN0-l3-epB" id="n9o-RQ-rmU"/>
             </connections>
         </placeholder>
@@ -21,12 +21,17 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Knt-o6-St6">
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knt-o6-St6">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <items>
                         <navigationItem title="Title" id="MZU-BI-TLw">
-                            <barButtonItem key="leftBarButtonItem" title="Item" id="nhq-ej-wIj"/>
+                            <barButtonItem key="leftBarButtonItem" image="left_action" id="nhq-ej-wIj">
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="backAction:" destination="-1" id="9mz-Kt-Oe2"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
@@ -49,8 +54,8 @@
                         <constraint firstAttribute="trailing" secondItem="KgD-5B-udb" secondAttribute="trailing" constant="16" id="xjR-1F-DVb"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ct4-ep-xOg">
-                    <rect key="frame" x="16" y="232" width="414" height="21.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ct4-ep-xOg">
+                    <rect key="frame" x="16" y="232" width="382" height="21.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -63,7 +68,7 @@
                 <constraint firstItem="oH0-3x-YPs" firstAttribute="top" secondItem="Knt-o6-St6" secondAttribute="bottom" id="LTW-6U-hOB"/>
                 <constraint firstItem="Ct4-ep-xOg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="URi-iP-RWt"/>
                 <constraint firstItem="Knt-o6-St6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Y88-W8-WGY"/>
-                <constraint firstItem="Ct4-ep-xOg" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="16" id="a7x-mK-qas"/>
+                <constraint firstItem="Ct4-ep-xOg" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-16" id="a7x-mK-qas"/>
                 <constraint firstItem="Knt-o6-St6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="gps-8l-UNk"/>
                 <constraint firstItem="Ct4-ep-xOg" firstAttribute="top" secondItem="oH0-3x-YPs" secondAttribute="bottom" constant="24" id="n16-OQ-1qt"/>
                 <constraint firstItem="oH0-3x-YPs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rNG-ns-gYO"/>
@@ -73,6 +78,7 @@
         </view>
     </objects>
     <resources>
+        <image name="left_action" width="40" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -146,21 +146,21 @@ extension InputDataTableViewCell: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.tag == 1 {
             if let inputText = textField.text {
-                if InputModel.validate(email: inputText).result {
+                if UserModel.validate(email: inputText).result {
                     setNormalState()
                     delegate?.didEnteredData(textField: textField, isHasError: false)
                 } else {
-                    setErrorState(errorMessage: InputModel.validate(email: inputText).error)
+                    setErrorState(errorMessage: UserModel.validate(email: inputText).error)
                     delegate?.didEnteredData(textField: textField, isHasError: true)
                 }
             }
         } else {
             if let inputText = textField.text {
-                if InputModel.validate(password: inputText).result {
+                if UserModel.validate(password: inputText).result {
                     setNormalState()
                     delegate?.didEnteredData(textField: textField, isHasError: false)
                 } else {
-                    setErrorState(errorMessage: InputModel.validate(password: inputText).error)
+                    setErrorState(errorMessage: UserModel.validate(password: inputText).error)
                     delegate?.didEnteredData(textField: textField, isHasError: true)
                 }
             }

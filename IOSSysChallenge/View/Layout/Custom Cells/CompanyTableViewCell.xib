@@ -33,6 +33,7 @@
                         <constraints>
                             <constraint firstItem="t2a-BY-qB2" firstAttribute="centerX" secondItem="puy-fK-h8w" secondAttribute="centerX" id="BWQ-qQ-8OJ"/>
                             <constraint firstItem="t2a-BY-qB2" firstAttribute="centerY" secondItem="puy-fK-h8w" secondAttribute="centerY" id="Hf8-XO-06M"/>
+                            <constraint firstAttribute="height" constant="120" id="e7a-eP-y3j"/>
                             <constraint firstItem="t2a-BY-qB2" firstAttribute="leading" secondItem="puy-fK-h8w" secondAttribute="leading" constant="16" id="jt3-RF-JRa"/>
                             <constraint firstAttribute="trailing" secondItem="t2a-BY-qB2" secondAttribute="trailing" constant="16" id="vkx-Qs-hjR"/>
                         </constraints>
@@ -50,7 +51,7 @@
                 <outlet property="backgroundCell" destination="puy-fK-h8w" id="v9X-DI-8FE"/>
                 <outlet property="titleLabel" destination="t2a-BY-qB2" id="hTG-HK-Q1x"/>
             </connections>
-            <point key="canvasLocation" x="141" y="115"/>
+            <point key="canvasLocation" x="139.85507246376812" y="114.50892857142857"/>
         </tableViewCell>
     </objects>
 </document>

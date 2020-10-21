@@ -10,8 +10,33 @@ import Foundation
 // MARK: -
 
 struct UserModel: Codable {
+    
+    // MARK: - Properties -
+ 
     var success: Bool?
     var investor: Investor?
+    
+    // MARK: - Static Methods -
+    
+    static func validate(email: String) -> (result: Bool, error: String) {
+        if email.isEmpty {
+            return (false, "Inform your email")
+        } else if !email.isValidEmail() {
+            return (false, "Inform a valid email")
+        } else {
+            return (true, "")
+        }
+    }
+    
+    static func validate(password: String) -> (result: Bool, error: String) {
+        if password.isEmpty {
+            return (false, "Informe your password")
+        } else if password.count < 4 {
+            return (false, "Inform a valid password")
+        } else {
+            return (true, "")
+        }
+    }
 }
 
 // MARK: -

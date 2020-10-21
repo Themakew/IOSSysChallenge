@@ -13,7 +13,6 @@
 		56CF5088253E65CE002B64F9 /* HeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56CF5087253E65CE002B64F9 /* HeaderViewCell.xib */; };
 		56CF509D253F11C9002B64F9 /* InputDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF509B253F11C9002B64F9 /* InputDataTableViewCell.swift */; };
 		56CF509E253F11C9002B64F9 /* InputDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56CF509C253F11C9002B64F9 /* InputDataTableViewCell.xib */; };
-		56CF50A9253F18FD002B64F9 /* InputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF50A8253F18FD002B64F9 /* InputModel.swift */; };
 		56CF50B7253F3301002B64F9 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF50B6253F3301002B64F9 /* String+Extension.swift */; };
 		56CF512A253F8A43002B64F9 /* OneButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF5128253F8A43002B64F9 /* OneButtonTableViewCell.swift */; };
 		56CF512B253F8A43002B64F9 /* OneButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56CF5129253F8A43002B64F9 /* OneButtonTableViewCell.xib */; };
@@ -68,7 +67,6 @@
 		56CF5087253E65CE002B64F9 /* HeaderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderViewCell.xib; sourceTree = "<group>"; };
 		56CF509B253F11C9002B64F9 /* InputDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDataTableViewCell.swift; sourceTree = "<group>"; };
 		56CF509C253F11C9002B64F9 /* InputDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputDataTableViewCell.xib; sourceTree = "<group>"; };
-		56CF50A8253F18FD002B64F9 /* InputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputModel.swift; sourceTree = "<group>"; };
 		56CF50B6253F3301002B64F9 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		56CF5128253F8A43002B64F9 /* OneButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonTableViewCell.swift; sourceTree = "<group>"; };
 		56CF5129253F8A43002B64F9 /* OneButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneButtonTableViewCell.xib; sourceTree = "<group>"; };
@@ -175,13 +173,13 @@
 		56EF40CC253E2FFD00D2DFF2 /* IOSSysChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				56FFD4FE2540B935008E2CB8 /* Utils */,
 				56EF4103253E30B600D2DFF2 /* AppDelegate */,
 				56EF4104253E30C100D2DFF2 /* Services */,
 				56EF410C253E30EF00D2DFF2 /* View */,
 				56EF4108253E30E600D2DFF2 /* ViewModel */,
 				56EF4107253E30DC00D2DFF2 /* Model */,
 				56EF4106253E30D100D2DFF2 /* Extensions */,
+				56FFD4FE2540B935008E2CB8 /* Utils */,
 				56EF4105253E30CA00D2DFF2 /* Resources */,
 			);
 			path = IOSSysChallenge;
@@ -247,7 +245,6 @@
 		56EF4107253E30DC00D2DFF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				56CF50A8253F18FD002B64F9 /* InputModel.swift */,
 				56CF5132253F91E9002B64F9 /* LoginModel.swift */,
 				565CDBEE253FB8DE004A91EE /* UserModel.swift */,
 				56FFD4B325407B49008E2CB8 /* AuthModel.swift */,
@@ -453,7 +450,6 @@
 				56FFD4CB25408D9F008E2CB8 /* UIScreen+Extension.swift in Sources */,
 				56EF410F253E314200D2DFF2 /* LoginViewController.swift in Sources */,
 				56FFD4EA2540A4A8008E2CB8 /* SearchCompaniesViewModel.swift in Sources */,
-				56CF50A9253F18FD002B64F9 /* InputModel.swift in Sources */,
 				565CDBEF253FB8DE004A91EE /* UserModel.swift in Sources */,
 				56CF5133253F91E9002B64F9 /* LoginModel.swift in Sources */,
 				56EF40CE253E2FFD00D2DFF2 /* AppDelegate.swift in Sources */,
