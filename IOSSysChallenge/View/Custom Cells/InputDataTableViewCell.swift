@@ -115,7 +115,7 @@ extension InputDataTableViewCell: UITextFieldDelegate {
                 if InputModel.validate(email: inputText).result {
                     setNormalState()
                 } else {
-                    setErrorState()
+                    setErrorState(errorMessage: InputModel.validate(email: inputText).error)
                 }
             }
         } else {
@@ -123,7 +123,7 @@ extension InputDataTableViewCell: UITextFieldDelegate {
                 if InputModel.validate(password: inputText).result {
                     setNormalState()
                 } else {
-                    setErrorState()
+                    setErrorState(errorMessage: InputModel.validate(password: inputText).error)
                 }
             }
         }

@@ -1,0 +1,11 @@
+/* 
+  IOSSysChallenge.strings
+  IOSSysChallenge
+
+  Created by Ruyther Costa on 20/10/20.
+  
+*/
+
+"service_url_error" = "Url inválida, tente novamente.";
+"service_success" = "Check-in realizado com sucesso!";
+"unknown_error" = "Sistema indisponível, por favor tente novamente";

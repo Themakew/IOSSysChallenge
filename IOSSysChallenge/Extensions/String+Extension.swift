@@ -11,7 +11,11 @@ import Foundation
 
 extension String {
     
-    // MARK: - Static Methods -
+    // MARK: - Public Methods -
+    
+    func text(comment: String = "", suffix: String = "") -> String {
+        return "\(NSLocalizedString(self, tableName: "IOSSysChallenge", bundle: Bundle.main, comment: comment))\(suffix)"
+    }
     
     func isValidEmail() -> Bool {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
