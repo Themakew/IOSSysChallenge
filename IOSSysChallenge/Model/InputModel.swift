@@ -22,7 +22,7 @@ struct InputModel {
     static func validate(email: String) -> (result: Bool, error: String) {
         if email.isEmpty {
             return (false, "Inform your email")
-        } else if email.isValidEmail() {
+        } else if !email.isValidEmail() {
             return (false, "Inform a valid email")
         } else {
             return (true, "")

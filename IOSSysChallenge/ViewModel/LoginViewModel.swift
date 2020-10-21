@@ -39,9 +39,27 @@ class LoginViewModel {
             switch response {
             case .failure(let error):
                 completion(.failure(error: error))
-            case let .success(responseData, client, token):
-                break
+            case let .success(user, client, token):
+                AppAuth.shared.signIn(email: request.email,
+                                      password: request.password,
+                                      client: client,
+                                      token: token)
+                completion(.success(model: user, client: client, token: token))
             }
         })
+    }
+    
+    func buildLoginList() -> [LoginBaseProtocol] {
+        var list = [LoginBaseProtocol]()
+        
+        list.append(InputTextField(id: 1, title: "Email", textFieldType: .email))
+        list.append(InputTextField(id: 2, title: "Senha", textFieldType: .password))
+        list.append(OneButton(title: "ENTRAR"))
+        
+        return list
+    }
+    
+    func getLoginModelObject(email: String, password: String) -> LoginModel {
+        return LoginModel(email: email, password: password)
     }
 }

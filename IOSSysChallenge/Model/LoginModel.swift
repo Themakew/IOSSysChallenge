@@ -17,13 +17,28 @@ struct InputTextField: LoginBaseProtocol {
     
     // MARK: - Properties -
     
+    var id: Int
     var title: String
     var textFieldType: InputCellType
     var isTextHidden: Bool = false
     var errorMessage: String = ""
 }
 
+// MARK: -
+
+struct OneButton: LoginBaseProtocol {
+    
+    // MARK: - Properties -
+    
+    var title: String
+}
+
+// MARK: -
+
 struct LoginModel: Codable {
+    
+    // MARK: - Properties -
+    
     var email: String
     var password: String
 }

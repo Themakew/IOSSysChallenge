@@ -7,6 +7,12 @@
 
 import UIKit
 
+// MARK: - OneButtonTableViewCellDelegate -
+
+protocol OneButtonTableViewCellDelegate {
+    func didClickButton()
+}
+
 // MARK: -
 
 class OneButtonTableViewCell: UITableViewCell {
@@ -14,6 +20,11 @@ class OneButtonTableViewCell: UITableViewCell {
     // MARK: - Properties -
     
     @IBOutlet weak var buttonOne: UIButton!
+    
+    static let identifier = "OneButtonTableViewCell"
+    static let fromNib = UINib(nibName: identifier, bundle: .main)
+    
+    var delegate: OneButtonTableViewCellDelegate?
     
     // MARK: - View Lifecycle -
     
@@ -27,7 +38,19 @@ class OneButtonTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func bind() {
-        buttonOne.setTitle("", for: .normal)
+    // MARK: - Public Methods -
+    
+    func bind(object: OneButton) {
+        buttonOne.setTitle(object.title, for: .normal)
+        buttonOne.isEnabled = false
+    }
+}
+
+// MARK: - Extension -
+
+extension OneButtonTableViewCell {
+    @IBAction
+    func buttonAction(_ sender: Any) {
+        delegate?.didClickButton()
     }
 }
