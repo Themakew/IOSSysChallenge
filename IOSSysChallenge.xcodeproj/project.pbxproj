@@ -24,7 +24,6 @@
 		56EF40D0253E2FFD00D2DFF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF40CF253E2FFD00D2DFF2 /* SceneDelegate.swift */; };
 		56EF40D7253E300000D2DFF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56EF40D6253E300000D2DFF2 /* Assets.xcassets */; };
 		56EF40DA253E300000D2DFF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EF40D8253E300000D2DFF2 /* LaunchScreen.storyboard */; };
-		56EF40E5253E300100D2DFF2 /* IOSSysChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF40E4253E300100D2DFF2 /* IOSSysChallengeTests.swift */; };
 		56EF40F0253E300100D2DFF2 /* IOSSysChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF40EF253E300100D2DFF2 /* IOSSysChallengeUITests.swift */; };
 		56EF410F253E314200D2DFF2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF410E253E314200D2DFF2 /* LoginViewController.swift */; };
 		56EF4118253E315D00D2DFF2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF4117253E315D00D2DFF2 /* LoginViewModel.swift */; };
@@ -41,6 +40,11 @@
 		56FFD4EA2540A4A8008E2CB8 /* SearchCompaniesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD4E92540A4A8008E2CB8 /* SearchCompaniesViewModel.swift */; };
 		56FFD4EF2540A502008E2CB8 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD4EE2540A502008E2CB8 /* CompanyModel.swift */; };
 		56FFD5002540B940008E2CB8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD4FF2540B940008E2CB8 /* Utils.swift */; };
+		56FFD51B2540FC84008E2CB8 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD51A2540FC83008E2CB8 /* MockURLSession.swift */; };
+		56FFD5242540FD4F008E2CB8 /* HTTPManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD5232540FD4F008E2CB8 /* HTTPManagerMock.swift */; };
+		56FFD52C2541011A008E2CB8 /* HTTPManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD52B2541011A008E2CB8 /* HTTPManagerTests.swift */; };
+		56FFD53425410AD9008E2CB8 /* MockURLSessionWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD53325410AD9008E2CB8 /* MockURLSessionWithError.swift */; };
+		56FFD53A25410BBB008E2CB8 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FFD53925410BBB008E2CB8 /* LoginViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +85,6 @@
 		56EF40D9253E300000D2DFF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56EF40DB253E300000D2DFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56EF40E0253E300100D2DFF2 /* IOSSysChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSSysChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		56EF40E4253E300100D2DFF2 /* IOSSysChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSSysChallengeTests.swift; sourceTree = "<group>"; };
 		56EF40E6253E300100D2DFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56EF40EB253E300100D2DFF2 /* IOSSysChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSSysChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EF40EF253E300100D2DFF2 /* IOSSysChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSSysChallengeUITests.swift; sourceTree = "<group>"; };
@@ -101,6 +104,11 @@
 		56FFD4E92540A4A8008E2CB8 /* SearchCompaniesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompaniesViewModel.swift; sourceTree = "<group>"; };
 		56FFD4EE2540A502008E2CB8 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 		56FFD4FF2540B940008E2CB8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		56FFD51A2540FC83008E2CB8 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		56FFD5232540FD4F008E2CB8 /* HTTPManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManagerMock.swift; sourceTree = "<group>"; };
+		56FFD52B2541011A008E2CB8 /* HTTPManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManagerTests.swift; sourceTree = "<group>"; };
+		56FFD53325410AD9008E2CB8 /* MockURLSessionWithError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionWithError.swift; sourceTree = "<group>"; };
+		56FFD53925410BBB008E2CB8 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +196,9 @@
 		56EF40E3253E300100D2DFF2 /* IOSSysChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				56EF40E4253E300100D2DFF2 /* IOSSysChallengeTests.swift */,
+				56FFD53825410B8B008E2CB8 /* ViewModelTests */,
+				56FFD5222540FD09008E2CB8 /* ServiceTests */,
+				56FFD5192540FC3F008E2CB8 /* Mock */,
 				56EF40E6253E300100D2DFF2 /* Info.plist */,
 			);
 			path = IOSSysChallengeTests;
@@ -300,6 +310,32 @@
 				56FFD4FF2540B940008E2CB8 /* Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		56FFD5192540FC3F008E2CB8 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				56FFD51A2540FC83008E2CB8 /* MockURLSession.swift */,
+				56FFD5232540FD4F008E2CB8 /* HTTPManagerMock.swift */,
+				56FFD53325410AD9008E2CB8 /* MockURLSessionWithError.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		56FFD5222540FD09008E2CB8 /* ServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				56FFD52B2541011A008E2CB8 /* HTTPManagerTests.swift */,
+			);
+			path = ServiceTests;
+			sourceTree = "<group>";
+		};
+		56FFD53825410B8B008E2CB8 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				56FFD53925410BBB008E2CB8 /* LoginViewModelTests.swift */,
+			);
+			path = ViewModelTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,7 +504,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56EF40E5253E300100D2DFF2 /* IOSSysChallengeTests.swift in Sources */,
+				56FFD53A25410BBB008E2CB8 /* LoginViewModelTests.swift in Sources */,
+				56FFD5242540FD4F008E2CB8 /* HTTPManagerMock.swift in Sources */,
+				56FFD51B2540FC84008E2CB8 /* MockURLSession.swift in Sources */,
+				56FFD52C2541011A008E2CB8 /* HTTPManagerTests.swift in Sources */,
+				56FFD53425410AD9008E2CB8 /* MockURLSessionWithError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
